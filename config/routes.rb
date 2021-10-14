@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     end
   end
   resources :users, only: [:new, :create]
+  get 'logout', to: 'sessions#logout'
   get 'login', to: 'sessions#new'
   post 'login', to: 'sessions#create'
   get 'welcome', to: 'sessions#welcome'
