@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @task.project_id %>
+</p>
+
+<%= link_to 'Edit', "/projects/#{params[:project_id]}/tasks/#{@task.id}/edit" %> |
+<%= link_to 'Back', " /projects/#{params[:project_id]}/tasks" %>

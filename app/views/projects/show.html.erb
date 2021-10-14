@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+<h2><strong>Name:<%= @project.name %></strong></h2>
+</p>
+<% if @tasks.present? %>
+  <h3><strong>Tasks:</strong></h3>
+  <p>
+    <% @tasks.each do |a| %>
+      <%= a.name %>
+    <% end %>
+  </p>
+<% else %>
+  <p>Tasks not found for this project to create <%= link_to 'click here', "/projects/#{@project.id}/tasks" %> </p>
+<% end %>
+
+
+
+<%= link_to 'New Task', "/projects/#{@project.id}/tasks/new" %>|
+<%= link_to 'Back', projects_path %>
