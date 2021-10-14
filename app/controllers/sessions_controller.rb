@@ -22,7 +22,4 @@ class SessionsController < ApplicationController
       redirect_to '/login'
     end
   end
-
-  def page_requires_login
-  end
 end

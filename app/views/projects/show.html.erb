@@ -1,5 +1,5 @@
+<%= button_to "logout", '/logout', method: :get%>
 <p id="notice"><%= notice %></p>
-
 <p>
 <h2><strong>Name:<%= @project.name %></strong></h2>
 </p>
@@ -13,8 +13,5 @@
 <% else %>
   <p>Tasks not found for this project to create <%= link_to 'click here', "/projects/#{@project.id}/tasks" %> </p>
 <% end %>
-
-
-
 <%= link_to 'New Task', "/projects/#{@project.id}/tasks/new" %>|
 <%= link_to 'Back', projects_path %>

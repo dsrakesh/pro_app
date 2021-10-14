@@ -1,23 +1,19 @@
+<%= button_to "logout", '/logout', method: :get %>
 <p id="notice"><%= notice %></p>
 <h1>Project:<%= @project.name %></h1>
 <h2>Tasks</h2>
 <% if @tasks.present? %>
   <table>
-
     <thead>
     <tr>
       <th>Name</th>
-
       <th colspan="3"></th>
     </tr>
-
     </thead>
-
     <tbody>
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.name %></td>
-
         <td><%= link_to 'Show', "/projects/#{params[:project_id]}/tasks/#{task.id}" %></td>
         <td><%= link_to 'Edit', "/projects/#{params[:project_id]}/tasks/#{task.id}/edit" %></td>
         <td><%= link_to 'Destroy', "/projects/#{params[:project_id]}/tasks/#{task.id}/destroy", method: :delete, data: {confirm: 'Are you sure?'} %></td>

@@ -1,7 +1,6 @@
+<%= button_to "logout", '/logout', method: :get%>
 <p id="notice"><%= notice %></p>
-
 <h1>Projects</h1>
-
 <table>
   <thead>
     <tr>
@@ -23,7 +22,5 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
-
 <%= link_to 'New Project', new_project_path %>

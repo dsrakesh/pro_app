@@ -1,6 +1,5 @@
+<%= button_to "logout", '/logout', method: :get%>
 <h1>Editing Task</h1>
-
 <%= render 'form1', task: @task %>
-
 <%= link_to 'Show', "/projects/#{params[:project_id]}/tasks/#{@task.id}" %> |
 <%= link_to 'Back', "/projects/#{params[:project_id]}/tasks" %>
